@@ -23,10 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '&dge#0j!@n*570z69yl06-uza6&_04236xa&$*=0ya6!d95ev@'
 
+# SECRET_KEY = os.getenv("SECRET_KEY")
+# SECRET_KEY = os.environ.get('SECRET_KEY')
+# print(SECRET_KEY)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['jobizil-blog.herokuapp.com', 'localhost']
 
 
 # Application definition
