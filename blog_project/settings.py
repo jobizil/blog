@@ -22,11 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&dge#0j!@n*570z69yl06-uza6&_04236xa&$*=0ya6!d95ev@'
+# SECRET_KEY = '&dge#0j!@n*570z69yl06-uza6&_04236xa&$*=0ya6!d95ev@'
 
-# SECRET_KEY = os.getenv("SECRET_KEY")
-# SECRET_KEY = os.environ.get('SECRET_KEY')
-# print(SECRET_KEY)
+SECRET_KEY = os.environ.get("SECRET_KEY")
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -155,14 +154,16 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 # Setting up environment variables
-EMAIL_USER = os.getenv("EMAIL_USER")
-EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+EMAIL_USER = os.environ.get("EMAIL_USER")
+EMAIL_PASSWORD = os.enEMAIL_USER = os.environ.get("EMAIL_PASSWORD")
 
 # AWS S3 user access
-AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
-AWS_STORAGE_BUCKET_NAME = os.getenv("AWS_STORAGE_BUCKET_NAME")
-AWS_S3_REGION_NAME = os.getenv("AWS_S3_REGION_NAME")
+AWS_ACCESS_KEY_ID = os.enEMAIL_USER = os.environ.get("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.enEMAIL_USER = os.environ.get(
+    "AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = os.enEMAIL_USER = os.environ.get(
+    "AWS_STORAGE_BUCKET_NAME")
+AWS_S3_REGION_NAME = os.enEMAIL_USER = os.environ.get("AWS_S3_REGION_NAME")
 
 
 AWS_S3_FILE_OVERWRITE = False
