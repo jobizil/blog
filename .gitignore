@@ -92,7 +92,6 @@ celerybeat-schedule
 # Environments
 .env
 .venv
-blog_project/credentials.py
 venv/
 ENV/
 env.bak/

@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-from .credentials import *
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -149,13 +148,26 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = EMAIL_USER
-EMAIL_HOST_PASSWORD = EMAIL_PASSWORD
+# EMAIL_HOST_USER = EMAIL_USER
+# EMAIL_HOST_PASSWORD = EMAIL_PASSWORD
 
-AWS_ACCESS_KEY_ID = AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY = AWS_SECRET_ACCESS_KEY
-AWS_STORAGE_BUCKET_NAME = AWS_STORAGE_BUCKET_NAME
-AWS_REGION_NAME = AWS_S3_REGION_NAME
+# AWS_ACCESS_KEY_ID = AWS_ACCESS_KEY_ID
+# AWS_SECRET_ACCESS_KEY = AWS_SECRET_ACCESS_KEY
+# AWS_STORAGE_BUCKET_NAME = AWS_STORAGE_BUCKET_NAME
+# AWS_REGION_NAME = AWS_S3_REGION_NAME
+
+
+# Setting up environment variables
+EMAIL_USER = os.getenv("EMAIL_USER")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+
+# AWS S3 user access
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = os.getenv("AWS_STORAGE_BUCKET_NAME")
+AWS_S3_REGION_NAME = os.getenv("AWS_S3_REGION_NAME")
+
+
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 
