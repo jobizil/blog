@@ -114,3 +114,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# # Setting up environment variables
+# EMAIL_USER = os.getenv("EMAIL_USER")
+# EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+
+# # # AWS S3 user access
+# # AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+# AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+# AWS_STORAGE_BUCKET_NAME = os.getenv("AWS_STORAGE_BUCKET_NAME")
