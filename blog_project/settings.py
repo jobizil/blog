@@ -154,15 +154,13 @@ EMAIL_USE_TLS = True
 
 # Setting up environment variables
 EMAIL_USER = os.environ.get("EMAIL_USER")
-EMAIL_PASSWORD = os.enEMAIL_USER = os.environ.get("EMAIL_PASSWORD")
+EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD")
 
 # AWS S3 user access
-AWS_ACCESS_KEY_ID = os.enEMAIL_USER = os.environ.get("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY = os.enEMAIL_USER = os.environ.get(
-    "AWS_SECRET_ACCESS_KEY")
-AWS_STORAGE_BUCKET_NAME = os.enEMAIL_USER = os.environ.get(
-    "AWS_STORAGE_BUCKET_NAME")
-AWS_S3_REGION_NAME = os.enEMAIL_USER = os.environ.get("AWS_S3_REGION_NAME")
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY] = os.environ.get("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME")
+AWS_S3_REGION_NAME = os.environ.get("AWS_S3_REGION_NAME")
 
 
 AWS_S3_FILE_OVERWRITE = False
