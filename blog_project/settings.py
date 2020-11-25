@@ -127,9 +127,10 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -148,14 +149,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = EMAIL_USER
-# EMAIL_HOST_PASSWORD = EMAIL_PASSWORD
-
-# AWS_ACCESS_KEY_ID = AWS_ACCESS_KEY_ID
-# AWS_SECRET_ACCESS_KEY = AWS_SECRET_ACCESS_KEY
-# AWS_STORAGE_BUCKET_NAME = AWS_STORAGE_BUCKET_NAME
-# AWS_REGION_NAME = AWS_S3_REGION_NAME
-
 
 # Setting up environment variables
 EMAIL_USER = os.getenv("EMAIL_USER")
