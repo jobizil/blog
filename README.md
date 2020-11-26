@@ -1,4 +1,4 @@
-# blog
+# Django-blog
 #### A basic blog built with Django framework with its static files served with AWS S3 Bucket.
 ##### Some of its functions
 - You can register to create an account
